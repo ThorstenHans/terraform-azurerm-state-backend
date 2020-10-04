@@ -12,7 +12,7 @@ provider "azurerm" {
 }
 
 module "state_backend" {
-  source = "tbd"
+  source = "ThorstenHans/state-backend/azurerm"
   
   resource_group_name  = "rg-tf-state"
   location             = "westeurope"
@@ -29,7 +29,8 @@ provider "azurerm" {
 }
 
 module "complex_state_backend" {
-  source = "./.."
+  source  = "ThorstenHans/state-backend/azurerm"
+  version = "0.0.1"
 
   # Configure Azure Resource Group
   resource_group_name = "complex-tf-state"
