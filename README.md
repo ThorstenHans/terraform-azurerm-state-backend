@@ -47,7 +47,6 @@ module "complex_state_backend" {
 
   # Azure Management Lock
   create_lock = true
-  lock_level  = "ReadOnly"
 
   # Configuration values applied to all resources
   location = "westeurope"
