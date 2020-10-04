@@ -20,12 +20,6 @@ variable "create_lock" {
   description = "Should a Lock being set"
 }
 
-variable "lock_level" {
-  type        = string
-  default     = "CanNotDelete"
-  description = "Specify the lock level (valid values are CanNotDelete and ReadOnly) defaults to CanNotDelete"
-}
-
 variable "storage_account_name" {
   type        = string
   description = "Name of the Azure Storage Account"
