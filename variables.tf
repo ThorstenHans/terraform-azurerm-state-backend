@@ -17,7 +17,7 @@ variable "tags" {
 variable "create_lock" {
   type        = bool
   default     = true
-  description = "Should a Lock being set"
+  description = "Should an Azure Management Lock being created?"
 }
 
 variable "storage_account_name" {
