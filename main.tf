@@ -13,6 +13,7 @@ resource "azurerm_resource_group" "rg" {
 
 resource "azurerm_management_lock" "rg_lock" {
   name       = "${var.resource_group_name}-lock"
+  count      = var.create_lock ? 1 : 0
   scope      = azurerm_resource_group.rg.id
   lock_level = var.lock_level
 }
